@@ -1,0 +1,28 @@
+buat folder baru nama: nama
+npm init -y
+npm i express express-fileupload
+
+untuk menjalankan react dan node pada saat yang bersamaan
+npm i -D nodemon concurrently
+
+pada server backend ubag server menjadi
+ "scripts": {
+    "start": "node server.js",
+    "server":"nodemon server.js",
+    "client":"npm start --prefix client",
+    "dev":"concurrently \"npm run server \"\"npm run client\""
+  },
+
+
+setelah itu create-react-app client
+
+sedangkan pada package.json react tambahkan ], proxy 
+menjadi "http://localhost:5000"
+
+dan pada react install npm i axios
+
+dan cd .. pada folder react untuk berada diluar direactory
+	
+	-root
+    		-client
+setelah itu jalankan dengan npm run dev
